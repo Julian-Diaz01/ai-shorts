@@ -1,0 +1,13 @@
+# TTS and Audio Processing
+TTS>=0.22.0
+pyttsx3>=2.90
+Pillow>=10.0.0
+
+# Additional useful packages for audio/video processing
+ffmpeg-python>=0.2.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# For potential ML/AI features
+torch>=2.0.0
+torchaudio>=2.0.0
