@@ -7,6 +7,12 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
+    "generate": "ts-node src/generate.ts",
+    "synth": "python ../python/synth.py ../output/script.json ../output/speech_all.wav",
+    "prepare-video": "python ../python/prepare_video.py",
+    "assemble": "python ../python/assemble.py",
+    "assemble-simple": "python ../python/assemble_simple.py",
+    "full": "ts-node src/run.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

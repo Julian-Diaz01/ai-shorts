@@ -74,6 +74,32 @@ class PythonOrchestrator {
     const outputPath = path.join(this.outputPath, outputFile);
     return this.executePythonScript('audio_processor.py', [inputPath, outputPath]);
   }
+
+  /**
+   * Prepare background video by trimming or looping to 30 seconds
+   */
+  async prepareBackgroundVideo(inputVideo: string, outputVideo: string = 'background.mp4', duration: number = 30): Promise<string> {
+    const inputPath = path.resolve(inputVideo); // Use absolute path for input
+    const outputPath = path.join(this.outputPath, outputVideo);
+    return this.executePythonScript('prepare_video.py', [inputPath, outputPath, duration.toString()]);
+  }
+
+  /**
+   * Assemble final YouTube Short video
+   */
+  async assembleVideo(
+    scriptFile: string = 'script.json',
+    backgroundVideo: string = 'background.mp4',
+    audioFile: string = 'speech_all.wav',
+    outputVideo: string = 'short.mp4'
+  ): Promise<string> {
+    const scriptPath = path.join(this.outputPath, scriptFile);
+    const backgroundPath = path.join(this.outputPath, backgroundVideo);
+    const audioPath = path.join(this.outputPath, audioFile);
+    const outputPath = path.join(this.outputPath, outputVideo);
+    
+    return this.executePythonScript('assemble.py', [scriptPath, backgroundPath, audioPath, outputPath]);
+  }
 }
 
 // Example usage
@@ -91,6 +117,14 @@ async function main() {
     // Example: Process the audio
     const processResult = await orchestrator.processAudio('test_audio.wav', 'processed_audio.wav');
     console.log('Processing Result:', processResult);
+
+    // Example: Prepare background video
+    const videoResult = await orchestrator.prepareBackgroundVideo('minecraft_runner.mp4', 'background.mp4', 30);
+    console.log('Video Preparation Result:', videoResult);
+
+    // Example: Assemble final video
+    const assembleResult = await orchestrator.assembleVideo('script.json', 'background.mp4', 'speech_all.wav', 'short.mp4');
+    console.log('Video Assembly Result:', assembleResult);
 
     console.log('Pipeline completed successfully!');
   } catch (error) {
