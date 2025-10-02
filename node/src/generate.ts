@@ -1,4 +1,3 @@
-import { loadModel } from 'gpt4all';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { loadConfig, Config } from './config';
