@@ -1,0 +1,74 @@
+{
+  "script": {
+    "topic": "interesting life stories from Reddit",
+    "style": "engaging, dramatic storytelling",
+    "duration_seconds": 5,
+    "hook_duration": 8,
+    "development_duration": 10,
+    "climax_duration": 12,
+    "max_words_per_scene": 50
+  },
+  "tts": {
+    "provider": "edge-tts",
+    "voice": "en-US-ChristopherNeural",
+    "rate": "+25%",
+    "volume": "+0%",
+    "pitch": "+0Hz",
+    "available_voices": {
+      "male": [
+        "en-US-ChristopherNeural",
+        "en-US-EricNeural",
+        "en-US-GuyNeural",
+        "en-US-RogerNeural"
+      ],
+      "female": [
+        "en-US-JennyNeural",
+        "en-US-AriaNeural",
+        "en-US-MichelleNeural"
+      ]
+    },
+    "speed_presets": {
+      "very_slow": "-50%",
+      "slow": "-25%",
+      "normal": "+0%",
+      "fast": "+25%",
+      "very_fast": "+50%"
+    }
+  },
+  "video": {
+    "background_video": "minecraft_runner.mp4",
+    "resolution": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "format": "mp4",
+    "codec": "libx264",
+    "audio_codec": "aac",
+    "crf": 23,
+    "preset": "fast"
+  },
+  "llm": {
+    "model": "llama3.2",
+    "temperature": 0.8,
+    "max_tokens": 500,
+    "use_gpu": true
+  },
+  "output": {
+    "directory": "./output",
+    "script_file": "script.json",
+    "audio_file": "speech_all.wav",
+    "background_file": "background.mp4",
+    "final_video": "short.mp4"
+  },
+  "text_overlay": {
+    "enabled": true,
+    "font": "Arial",
+    "font_size": 60,
+    "font_color": "white",
+    "position": "upper_third",
+    "background_color": "black@0.7",
+    "border_width": 5
+  }
+}
+

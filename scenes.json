@@ -1,0 +1,72 @@
+{
+  "scenes": [
+    {
+      "id": "reddit_stories",
+      "name": "Reddit Life Stories",
+      "description": "Engaging dramatic stories from Reddit",
+      "topic": "interesting life stories from Reddit",
+      "style": "engaging, dramatic storytelling",
+      "hook_duration": 8,
+      "development_duration": 10,
+      "climax_duration": 12,
+      "max_words_per_scene": 50,
+      "voice": "en-US-ChristopherNeural",
+      "rate": "+25%",
+      "example_script": {
+        "title": "Pokémon Card Collection Tragedy",
+        "duration_seconds": 47,
+        "scenes": [
+          {
+            "start": 0,
+            "end": 6,
+            "voice": "My wife threw away my entire Pokémon card collection because she said I was too old for it.",
+            "overlay": "She threw away my cards"
+          },
+          {
+            "start": 6,
+            "end": 12,
+            "voice": "I’m 30 and have been collecting since I was a kid, some of them even from the 90s.",
+            "overlay": "Collecting since childhood"
+          },
+          {
+            "start": 12,
+            "end": 18,
+            "voice": "Some were worth money, but mostly they were sentimental, reminding me of my childhood.",
+            "overlay": "Sentimental, not just value"
+          },
+          {
+            "start": 18,
+            "end": 23,
+            "voice": "I kept them neatly in binders on a shelf in my office.",
+            "overlay": "Neatly kept in binders"
+          },
+          {
+            "start": 23,
+            "end": 29,
+            "voice": "A few days ago, I noticed they were gone, and when I asked my wife where they were, she told me she threw them out.",
+            "overlay": "She admitted tossing them"
+          },
+          {
+            "start": 29,
+            "end": 35,
+            "voice": "Her reason was that I’m a grown man and don’t need to play with kids’ stuff.",
+            "overlay": "Her excuse: 'too old'"
+          },
+          {
+            "start": 35,
+            "end": 41,
+            "voice": "I honestly felt sick. She didn’t even ask, just binned something that’s been part of my life for decades.",
+            "overlay": "I felt sick"
+          },
+          {
+            "start": 41,
+            "end": 47,
+            "voice": "When I got angry, she doubled down and said I should thank her for helping me move on.",
+            "overlay": "She said I should thank her"
+          }
+        ]
+      }
+    }
+  ],
+  "default_scene": "reddit_stories"
+}
